@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	/*=============== LOADER ===============*/
 	// window.addEventListener("load", () => {
 	// 	const loader = document.querySelector(".loader");
 
@@ -10,7 +11,7 @@ $(document).ready(function() {
 	// 	});
 	// });
 
-
+	/*=============== MAGNIFIC POPUP ===============*/
 	$('.image-popup-no-margins').magnificPopup({
 		type: 'image',
 		closeOnContentClick: false,

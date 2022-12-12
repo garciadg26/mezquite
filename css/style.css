@@ -79,48 +79,14 @@
     --font-dm-serif:'DM Serif Text', serif;
     --color-black:#000000;
     --color-white:#ffffff;
+    --color-body:#FEFDFB;
     --color-aqua:#0BFFF8;
     --color-aqua-claro:#E0F7F5;
     --color-aqua-x-claro:#D0FCF8;
     --color-aqua-obscuro:#1CCEC9;
     --font-slide:20em;
-
-    /*========== APARTE ==========*/
-    /*========== Colors ==========*/
-    --hue-color: 206;
-    --black-color: hsl(var(--hue-color), 4%, 4%);
-    --black-color-alt: hsl(var(--hue-color), 4%, 8%);
-    --title-color: hsl(var(--hue-color), 4%, 95%);
-    --text-color: hsl(var(--hue-color), 4%, 75%);
-    --text-color-light: hsl(var(--hue-color), 4%, 65%);
-    --white-color: #FFF;
-    --body-color: hsl(var(--hue-color), 4%, 6%);
-    --container-color: hsl(var(--hue-color), 4%, 10%);
-    --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 24%), hsl(var(--hue-color), 4%, 8%));
-    --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
-    --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
-    /*========== Font and typography ==========*/
-    --body-font: 'Poppins', sans-serif;
-    --biggest-font-size: 5rem;
-    --bigger-font-size: 3.5rem;
-    --big-font-size: 2.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-    --text-line-height: 2rem;
-    /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
-    /*========== Margenes Bottom ==========*/
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    /*========== z index ==========*/
     --z-tooltip: 10;
 }
 body {
@@ -128,7 +94,7 @@ body {
   padding: 0;
   font-size: 16px;
   overflow-x: hidden;
-  background-color: #FEFDFB;
+  background-color: var(--color-body);
 }
 .green_dark{
   color: var(--color-aqua-obscuro);
@@ -195,7 +161,6 @@ h2.subTitSlide{
 
 /*=============== NAV ===============*/
 .nav {
-  height: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,7 +234,7 @@ h2.subTitSlide{
 .nav__close {
   position: absolute;
   font-size: 2.5rem;
-  top: 1rem;
+  top: 32px;
   right: 58px;
   color: var(--color-white);
   cursor: pointer;
@@ -570,13 +535,6 @@ ul.horarios li span{
 	padding: 0;
 }
 
-
-/* 
-
-for zoom animation 
-uncomment this part if you haven't added this code anywhere else
-
-*/
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
@@ -984,42 +942,7 @@ img.mfp-img {
   bottom: 5rem;
 }
 
-/* .loader{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f7f9fb;
-  transition: opacity 0.75s, visibility 0.75s;
-  z-index: 999999999999;
-}
-.loader-hidden{
-  opacity: 0;
-  visibility: hidden;
-}
 
-.loader::after{
-  content: "";
-  width: 75px;
-  height: 75px;
-  border: 12px solid #dddddd;
-  border-top-color: var(--color-aqua-obscuro);
-  border-radius: 50%;
-  animation: loading 0.75s ease infinite;
-}
-
-@keyframes loading{
-  from{
-    transform: rotate(0turn);
-  }
-  to{
-    transform: rotate(1turn);
-  }
-} */
 
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
@@ -1061,7 +984,33 @@ img.mfp-img {
     text-align: center;
     padding: 0; } }
 
-@media all and (max-width: 900px) {
+/*__MEDIA QUERIES 1280px*/
+@media all and (min-width:769px) and (max-width:1280px){
+  .cont_desc {
+    margin-bottom: 120px;
+    margin-left: 20%;
+  }
+  .owl-carousel.home-slider .owl-nav .owl-prev {
+    right: 18%;
+    margin-left: 50px;
+  }
+  .owl-carousel.home-slider .owl-nav .owl-next {
+    right: 2%;
+    margin-right: 50px;
+  }
+  ul.horarios {
+    padding: 60px 0px 0px 0px;
+  }
+  ul.horarios li {
+    font-size: 1.5em!important;
+  }
+  #footer {
+    padding: 40px 60px;
+  }
+}
+
+/*__MEDIA QUERIES 991px*/
+@media all and (min-width:576px) and (max-width:768px){
   .mfp-arrow {
     -webkit-transform: scale(0.75);
     transform: scale(0.75); }
@@ -1073,9 +1022,88 @@ img.mfp-img {
     transform-origin: 100%; }
   .mfp-container {
     padding-left: 6px;
-    padding-right: 6px; } }
+    padding-right: 6px; }
+  .nav__list {
+      height: 56vh;
+  }
+  .cont_desc {
+    margin-bottom: 190px;
+    margin-left: 20%;
+  }
+  .owl-carousel.home-slider .owl-nav .owl-prev {
+    right: 20%;
+    margin-left: 50px;
+  }
+  .owl-carousel.home-slider .owl-nav .owl-next {
+    right: 1%;
+    margin-right: 50px;
+  }
+  section#about, section#menu, section#gallery {
+    padding: 80px 0px 0px 0px;
+  }
+  section#gallery {
+    padding: 0px 0px 0px 0px;
+  }
+  #menu .cont_btn{
+    text-align: center;
+    margin: 0 auto;
+  }
+  #menu img{
+    margin:20px 0px 40px 0px;
+  }
+  .mfp-close::after {
+    margin-top: 40px;
+    margin-left: -40px;
+  }
+  .ul.horarios li{
+    font-size: 1.5em;
+  }
+  #gallery{
+    background-image: none!important;
+    margin-top: 40px;
+  }
+  #gallery img{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .gallery_first img{
+    margin-bottom: 40px;
+  }
+  .gallery_second {
+    padding-top: 0px;
+  }
+  .gallery_second div:nth-child(1) img {
+    position: relative;
+    right: 0%;
+  }
+  .gallery_second div:nth-child(2) {
+    margin-top: 40px;
+  }
+  .gallery_second div:nth-child(2) img {
+    right: 0%;
+  }
+  #gallery picture img:hover{
+    transform: scale(1);
+  }
+  ul.horarios {
+    padding: 40px 0px 0px 0px;
+  }
+  .list_contact, .list_social{
+    text-align: center;
+  }
+  .icon_mzq{
+    margin-bottom: 20px;
+  }
+  ul.horarios li{
+    font-size: 1.8em;
+  }
+  #footer {
+    padding: 40px 80px;
+  }
+}
 
-/*__MEDIA QUERIES*/
+
+/*__MEDIA QUERIES 576px*/
 @media all and (max-width:576px){
   .nav__list {
     height: 60vh;
@@ -1110,6 +1138,9 @@ img.mfp-img {
     margin-bottom: 70%;
     margin-left: 10%;
     max-width: 260px;
+  }
+  .owl-carousel.home-slider .owl-dots {
+    bottom: 140px;
   }
   .owl-carousel.home-slider .owl-dots{
     text-align: center;
@@ -1189,3 +1220,39 @@ img.mfp-img {
   }
 }
 
+/* .loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 999999999999;
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 12px solid #dddddd;
+  border-top-color: var(--color-aqua-obscuro);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+} */
