@@ -13,44 +13,44 @@
 }
 @font-face {
   font-family: 'NewOrder-semibold';
-  src: url('../fonts/NewOrder-semibold.eot');
-  src: url('../fonts/NewOrder-semibold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NewOrder-semibold.woff2') format('woff2'),
-       url('../fonts/NewOrder-semibold.woff') format('woff'),
-       url('../fonts/NewOrder-semibold.svg#webfont') format('svg');
+  src: url('../fonts/NewOrder-Semibold.eot');
+  src: url('../fonts/NewOrder-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NewOrder-Semibold.woff2') format('woff2'),
+       url('../fonts/NewOrder-Semibold.woff') format('woff'),
+       url('../fonts/NewOrder-Semibold.svg#webfont') format('svg');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'NewOrder-medium';
-  src: url('../fonts/NewOrder-medium.eot');
-  src: url('../fonts/NewOrder-medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NewOrder-medium.woff2') format('woff2'),
-       url('../fonts/NewOrder-medium.woff') format('woff'),
-       url('../fonts/NewOrder-medium.svg#webfont') format('svg');
+  src: url('../fonts/NewOrder-Medium.eot');
+  src: url('../fonts/NewOrder-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NewOrder-Medium.woff2') format('woff2'),
+       url('../fonts/NewOrder-Medium.woff') format('woff'),
+       url('../fonts/NewOrder-Medium.svg#webfont') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'NewOrder-regular';
-  src: url('../fonts/NewOrder-regular.eot');
-  src: url('../fonts/NewOrder-regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NewOrder-regular.woff2') format('woff2'),
-       url('../fonts/NewOrder-regular.woff') format('woff'),
-       url('../fonts/NewOrder-regular.svg#webfont') format('svg');
+  src: url('../fonts/NewOrder-Regular.eot');
+  src: url('../fonts/NewOrder-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NewOrder-Regular.woff2') format('woff2'),
+       url('../fonts/NewOrder-Regular.woff') format('woff'),
+       url('../fonts/NewOrder-Regular.svg#webfont') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'NewOrder-light';
-  src: url('../fonts/NewOrder-light.eot');
-  src: url('../fonts/NewOrder-light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NewOrder-light.woff2') format('woff2'),
-       url('../fonts/NewOrder-light.woff') format('woff'),
-       url('../fonts/NewOrder-light.svg#webfont') format('svg');
+  src: url('../fonts/NewOrder-Light.eot');
+  src: url('../fonts/NewOrder-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NewOrder-Light.woff2') format('woff2'),
+       url('../fonts/NewOrder-Light.woff') format('woff'),
+       url('../fonts/NewOrder-Light.svg#webfont') format('svg');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -128,6 +128,7 @@ body {
   padding: 0;
   font-size: 16px;
   overflow-x: hidden;
+  background-color: #FEFDFB;
 }
 .green_dark{
   color: var(--color-aqua-obscuro);
@@ -136,7 +137,7 @@ body {
 /*__STYLE FONT*/
 p{
   font-family: var(--font-europa-regular);
-  font-size: .9em;
+  font-size: 1em;
   line-height: 1.25em;
   font-weight: 400;
 }
@@ -160,6 +161,7 @@ h2.subTitSlide{
   font-size: 1.2em;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 1em;
 }
 .txt_frase{
   text-align: center;
@@ -174,8 +176,6 @@ h2.subTitSlide{
   font-size: 1em;
   color: var(--color-aqua-obscuro);
 }
-
-
 
 /*__MENU PRINCIPAL*/
 #header{
@@ -195,16 +195,15 @@ h2.subTitSlide{
 
 /*=============== NAV ===============*/
 .nav {
-  height: 3rem;
+  height: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px 0px 16px;
+  padding: 34px 58px 0px 58px;
 }
 
 .nav__logo img {
-  display: flex;
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 .nav__icon img {
@@ -219,8 +218,11 @@ h2.subTitSlide{
   color: var(--color-white);
   cursor: pointer;
   position: absolute;
-  right: 16px;
+  right: 58px;
   z-index: 99;
+}
+.signature{
+  margin-top: 1em;
 }
 
 /* @media screen and (max-width: 2561px) { */
@@ -261,26 +263,27 @@ h2.subTitSlide{
 }
 
 .nav__link:hover {
-  background: var(--color-aqua);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--color-aqua);
 }
 
 .nav__close {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   top: 1rem;
-  right: 1rem;
+  right: 58px;
   color: var(--color-white);
   cursor: pointer;
 }
+.nav__underline a{
+  text-decoration: underline!important;
+}
+
     /* FOOTER MENU */
 .footer_menu{
   position: absolute;
   bottom: 16px;
   width: 100%;
-  padding: 0px 24px;
+  padding: 0px 58px;
 }
 .footer_menu ul li a{
   font-family: var(--font-new-order-semibold);
@@ -288,8 +291,8 @@ h2.subTitSlide{
   font-size: 1.2em;
 }
 .cont_logo_menu{
-  margin-top: -48px;
-  margin-left: 16px;
+  margin-top: -30px;
+  margin-left: 58px;
   max-width: 150px;
 }
 
@@ -366,7 +369,7 @@ h2.subTitSlide{
 .owl-carousel.home-slider .owl-dots{
   text-align: right;
   margin-left: -10%;
-  bottom:140px;
+  bottom:170px;
 }
 .owl-carousel.home-slider .owl-dots .owl-dot{
   border-radius: 0%;
@@ -396,6 +399,7 @@ section#about, section#menu, section#gallery{
   line-height: 1.2;
   max-width: 300px;
   font-weight: 800;
+  margin-bottom: 0.6em;
 }
 .subEncabezado{
   font-family: var(--font-dm-serif);
@@ -406,7 +410,7 @@ section#about, section#menu, section#gallery{
 .btn_principal{
   padding: 8px 22px;
   font-family: var(--font-new-order-regular);
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--color-aqua-obscuro);
   border: 1px solid var(--color-aqua-obscuro);
   background-color: var(--color-white);
@@ -414,6 +418,9 @@ section#about, section#menu, section#gallery{
 .btn_principal:hover{
   background-color: var(--color-aqua-claro);
   color: var(--color-aqua-obscuro);
+}
+#menu .cont_btn{
+  margin-top: 2em;
 }
 
 /*__GALLERY*/
@@ -429,13 +436,13 @@ section#about, section#menu, section#gallery{
   width: 80%;
   margin-left: 10%;
 }
-#gallery picture img, #menu picture img{
+#gallery .col-md-4, #gallery .col-md-8, #menu .col-md-7{
   transform: scale(1);
   -webkit-transition: all .2s ease-in-out 0s;
   transition: all .2s ease-in-out;
 }
 
-#gallery picture img:hover, #menu picture img:hover{
+#gallery .col-md-4:hover, #gallery .col-md-8:hover, #menu .col-md-7:hover{
   transform: scale(1.1);
 }
 
@@ -469,7 +476,7 @@ ul.horarios li{
   font-family: var(--font-new-order-light);
   font-size: 2em;
   color: var(--color-aqua-obscuro);
-  margin-top: -18px;
+  margin-top: -10px;
 }
 ul.horarios li span{
   font-family: var(--font-new-order-semibold);
@@ -977,21 +984,42 @@ img.mfp-img {
   bottom: 5rem;
 }
 
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: .60rem;
-  border-radius: .5rem;
+/* .loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 999999999999;
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
-  border-radius: .5rem;
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 12px solid #dddddd;
+  border-top-color: var(--color-aqua-obscuro);
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scroll-thumb-color-alt);
-}
-
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+} */
 
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
@@ -1052,13 +1080,32 @@ img.mfp-img {
   .nav__list {
     height: 60vh;
   }
+  .nav {
+    padding: 8px 16px 0px 16px;
+  }
+  .nav__toggle {
+    right: 24px;
+  }
+  .nav__logo img {
+    width: 150px;
+    height: auto;
+  }
   .icon_mzq_menu{
     margin-bottom: 20px;
   }
   .icon_mzq_menu img {
     width: 60px;
     z-index: 99999999;
-}
+  }
+  .nav__close {
+    top: 8px;
+    right: 24px;
+  }
+  .cont_logo_menu {
+    margin-top: -46px;
+    margin-left: 16px;
+    max-width: 150px;
+  }
   .cont_desc{
     margin-bottom: 70%;
     margin-left: 10%;

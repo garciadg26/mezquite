@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- STYLE CSS -->
-    <link rel="stylesheet" href="css/slider.css?ver=1.0.0">
-    <link rel="stylesheet" href="css/style.css?ver=1.2.7">
+    <link rel="stylesheet" href="css/slider.css?ver=1.1.0">
+    <link rel="stylesheet" href="css/style.css?ver=1.3.51">
     <link rel="stylesheet" href="css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-    <!--=============== REMIX ICONS ===============-->
     
 </head>
 <body>
@@ -45,7 +44,7 @@
                     <li class="nav__item">
                         <a href="#gallery" class="nav__link">GALLERY</a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item nav__underline">
                         <a href="#contact" class="nav__link">CONTACT US!</a>
                     </li>
                 </ul>
@@ -174,7 +173,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <img class="img-fluid home__img" src="images/signature-mezquite.svg" alt="">
+                    <img class="img-fluid home__img signature" src="images/signature-mezquite.svg" alt="">
                     <p class="caption home__header">“At vero eos et accusamus et iusto odio dignissimos”</p>
                 </div>
             </div>
@@ -220,13 +219,8 @@
                         </picture>
                     </a>
                 </div>
-                <!-- <img src="images/mezquite-pozole.webp" alt="Doux Amour Repostería sitio web" /> -->
-                <!-- <div class="gallery">
-                    <figure>
-                    </figure>
-                </div> -->
                 <div class="col-md-4">
-                    <a class="image-popup-no-margins home__img" href="images/mezquite-restaurant.webp">
+                    <a class="image-popup-no-margins" href="images/mezquite-restaurant.webp">
                         <picture>
                             <source srcset="images/mezquite-restaurant-small.webp" type="webp/jpeg">
                             <source srcset="images/mezquite-restaurant-small.jpg" type="images/jpeg">
@@ -235,7 +229,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a class="image-popup-no-margins home__img" href="images/mezquite-food-plate.webp">
+                    <a class="image-popup-no-margins" href="images/mezquite-food-plate.webp">
                         <picture>
                             <source srcset="images/mezquite-food-plate.webp" type="webp/jpeg">
                             <source srcset="images/mezquite-food-plate.jpg" type="images/jpeg">
@@ -246,7 +240,7 @@
             </div>
             <div class="row gallery_second">
                 <div class="col-md-8">
-                    <a class="image-popup-no-margins home__img" href="images/mezquite-snaks.webp">
+                    <a class="image-popup-no-margins" href="images/mezquite-snaks.webp">
                         <picture>
                             <source srcset="images/mezquite-snaks.webp" type="webp/jpeg">
                             <source srcset="images/mezquite-snaks.jpg" type="images/jpeg">
@@ -255,7 +249,7 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a class="image-popup-no-margins home__img" href="images/mezquite-restaurant-center.webp">
+                    <a class="image-popup-no-margins" href="images/mezquite-restaurant-center.webp">
                         <picture>
                             <source srcset="images/mezquite-restaurant-center.webp" type="webp/jpeg">
                             <source srcset="images/mezquite-restaurant-center.jpg" type="images/jpeg">
@@ -335,60 +329,32 @@
             </div>
         </div>
     </footer>
-
-    <!-- JQUERY -->
-    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-          // Add smooth scrolling to all links
-          $("a").on('click', function(event) {
-        
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-        
-              // Store hash
-              var hash = this.hash;
-        
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-        
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });
-        });
-        </script>
-
-    <!-- BOOTSTRAP -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/popper.js"></script>
-    <!-- SCRIPT -->
-    <script type="text/javascript" src="js/main.js?ver=1.2.7"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-
-
-
     <!--=============== SCROLL UP ===============-->
     <a href="#home" class="scrollup" id="scroll-up">
         <i class="icon ion-ios-arrow-round-up scrollup__icon"></i>
     </a>
+    <div class="loader"></div>
+
+    <!-- JQUERY -->
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <!-- <script type="text/javascript" src="js/popper.js"></script> -->
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="js/main.js?ver=1.3.51"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+
+
+
+
     
     <!--=============== SCROLL REVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <script type="text/javascript" src="js/pop.js?ver=1.2.7"></script>
-
-    <!-- <script type="text/javascript" src="js/gallery.js?ver=1.0.0"></script> -->
-    
-
+    <script type="text/javascript" src="js/pop.js?ver=1.3.51"></script>
 
     <!-- SVG -->
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
