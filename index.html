@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- STYLE CSS -->
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/style.css?ver=1.2.0">
+    <link rel="stylesheet" href="css/slider.css?ver=1.0.0">
+    <link rel="stylesheet" href="css/style.css?ver=1.2.7">
     <link rel="stylesheet" href="css/retina.css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
@@ -28,9 +28,9 @@
             </a>
             <div class="nav__menu" id="nav-menu">
                 <div class="cont_logo_menu">
-                    <!-- <a href="#home" class="nav__logo">
+                    <a href="#home" class="nav__logo">
                         <img src="images/logotipo-mezquite.svg" alt="logotipo mezquite">
-                    </a> -->
+                    </a>
                 </div>
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -53,7 +53,7 @@
                 <div class="nav__close" id="nav-close">
                     <i class="icon ion-md-close"></i>
                 </div>
-                <!-- <div class="footer_menu">
+                <div class="footer_menu">
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-md-4">
                             <ul class="list_contact">
@@ -65,8 +65,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-4 text-center icon_mzq">
-                            <img src="images/icon_mezquite_bn.svg" alt="">
+                        <div class="col-md-4 text-center icon_mzq_menu">
+                            <a href="" class="nav__icon">
+                                <img src="images/icon_mezquite_bn.svg" alt="icono mezquite">
+                            </a>
                         </div>
                         <div class="col-md-4">
                             <ul class="list_social">
@@ -79,7 +81,7 @@
                             </ul>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
@@ -335,26 +337,54 @@
     </footer>
 
     <!-- JQUERY -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+
     <!-- BOOTSTRAP -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <!-- <script type="text/javascript" src="js/popper.js"></script> -->
+    <script type="text/javascript" src="js/popper.js"></script>
     <!-- SCRIPT -->
-    <script type="text/javascript" src="js/main.js?ver=1.2.0"></script>
+    <script type="text/javascript" src="js/main.js?ver=1.2.7"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 
 
 
     <!--=============== SCROLL UP ===============-->
-    <a href="#" class="scrollup" id="scroll-up">
+    <a href="#home" class="scrollup" id="scroll-up">
         <i class="icon ion-ios-arrow-round-up scrollup__icon"></i>
     </a>
     
     <!--=============== SCROLL REVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <script type="text/javascript" src="js/pop.js?ver=1.2.0"></script>
+    <script type="text/javascript" src="js/pop.js?ver=1.2.7"></script>
 
     <!-- <script type="text/javascript" src="js/gallery.js?ver=1.0.0"></script> -->
     

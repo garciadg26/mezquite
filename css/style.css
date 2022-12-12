@@ -123,9 +123,6 @@
     /*========== z index ==========*/
     --z-tooltip: 10;
 }
-html {
-  scroll-behavior: smooth;
-}
 body {
   margin: 0;
   padding: 0;
@@ -209,6 +206,12 @@ h2.subTitSlide{
   display: flex;
   width: 150px;
   height: auto;
+}
+.nav__icon img {
+  display: flex;
+  width: 60px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .nav__toggle {
@@ -485,6 +488,13 @@ ul.horarios li span{
 }
 .icon_mzq img{
   width: 80px;
+}
+.icon_mzq_menu img {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: auto;
+  z-index: 99999999;
 }
 .list_contact{
   text-align: left;
@@ -1039,6 +1049,16 @@ img.mfp-img {
 
 /*__MEDIA QUERIES*/
 @media all and (max-width:576px){
+  .nav__list {
+    height: 60vh;
+  }
+  .icon_mzq_menu{
+    margin-bottom: 20px;
+  }
+  .icon_mzq_menu img {
+    width: 60px;
+    z-index: 99999999;
+}
   .cont_desc{
     margin-bottom: 70%;
     margin-left: 10%;
@@ -1075,6 +1095,9 @@ img.mfp-img {
   .mfp-close::after {
     margin-top: 40px;
     margin-left: -40px;
+  }
+  #gallery{
+    background-image: none!important;
   }
   #gallery img{
     width: 100%;
@@ -1114,8 +1137,8 @@ img.mfp-img {
   .nav__menu {
     background-image: url('../images/mezquite-menu-bg.jpg')!important;
   }
-  #gallery{
-    background-image: none!important;
+  .footer_menu {
+    bottom: 32px;
   }
 }
 
